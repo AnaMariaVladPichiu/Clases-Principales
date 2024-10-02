@@ -1,2 +1,5 @@
-h1 { color: rgb(140, 111, 111); font-family: Arial; font-size: large; }
-        p { color: gray; font-family: Verdana; font-size: medium; }
+p > span { color: blue; }
+<p><span>Texto1</span></p>
+<p><a href="#"><span>Texto2</span></a></p>
+p a { color: red; }
+p > a { color: blue; }
