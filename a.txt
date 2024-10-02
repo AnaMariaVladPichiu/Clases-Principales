@@ -1,1 +1,12 @@
 Hola
+    ../proyecto/ejercicio-web-personal.md
+
+    ./foto.png
+
+ 1 ./C/b.text
+    C/b.text
+ 2 A/D/E/F/
+   A/D/E/foto
+ 3../../../
+ 4 A/B/C/c.txt  
+ 5 
