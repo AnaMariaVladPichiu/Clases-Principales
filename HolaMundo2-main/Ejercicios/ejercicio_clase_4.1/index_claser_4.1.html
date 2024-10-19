@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //Ejercicio 1
+        /*solución 1 Función anonima asignada a variable : asignando una función a la variable (var); esta disponible solo despues de la asignacion
+          var saludar = function() {   
+              alert("Hola!");
+          }; 
+          var despedir = function() {
+             alert("Adios!");
+          }; */
+
+        /*solucion 2 Funcion declarada; está disponible en todo el ambito en el que se declara, en este caso en todo el script*/
+        function saludar() {
+            alert("Hola!!!");
+        }
+        function despedir() {
+            alert("Adios !!!");
+            document.body.style.backgroundColor = "lightblue"; /* cuando pulsa el boton, al saludar cambia el color de la pagina*/
+            var nuevoElemento = document.createElement("p"); /* crea un nuevo elemeno parafo*/
+            nuevoElemento.innerText = "¡Has saludado!"; /* le inserta un texto*/
+            document.body.appendChild(nuevoElemento); /* lo añade al body*/
+
+        }
+
+        //Ejercicio 2
+
+        let frutas = ["Manzana", "Banana"]
+        function frutaAñadida() { 
+            let list1 = frutas.push(prompt("Inserta una fruta")); alert(frutas);
+        }  
+        function frutaQuitada() {
+            frutas.pop(); alert(frutas);
+        } 
+    
+    </script>
+</head>
+
+<body>
+    <button onclick="saludar()">Saludar</button>
+    <button onclick="despedir()">Despedir</button>
+    <button onclick="frutaAñadida()">Añadir</button>
+    <button onclick="frutaQuitada()">Quitar</button>
+
+</body>
+
+</html>
