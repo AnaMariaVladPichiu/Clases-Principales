@@ -39,7 +39,7 @@ let letra = String(prompt("Introduzca una letra"));
 let cuantas_veces=0
 
 for (let i = 0; i < frase.length; i++) {
-    if (frase[i]== letra) { cuantas_veces++
+    if (frase. charAt[i]== letra) { cuantas_veces++
         
     }
     
