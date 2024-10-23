@@ -1,4 +1,4 @@
-/ Disponemos en la caja del siguiente dinero distribuido de la siguiente manera: 234,27 € (información que se debe cargar en un array)// - Billetes de 500€: 0
+/* / Disponemos en la caja del siguiente dinero distribuido de la siguiente manera: 234,27 € (información que se debe cargar en un array)// - Billetes de 500€: 0 */
 // - Billetes de 200€: 0
 // - Billetes de 100€: 0
 // - Billetes de 50€: 1 
