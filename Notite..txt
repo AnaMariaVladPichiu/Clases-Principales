@@ -12,3 +12,15 @@ https://www.lavanguardia.com/seguros/hogar/20180621/462106122585/que-beneficios-
  3../../../
  4 A/B/C/c.txt  
  5 
+
+Selectores en Css:
+De atributo, attr.
+Resumen
+[attr]: Selecciona elementos con el atributo attr.
+[attr=value]: Selecciona elementos con el atributo attr igual a value.
+[attr~=value]: Selecciona elementos con el atributo attr que contiene value como una palabra separada por espacios.
+[attr|=value]: Selecciona elementos con el atributo attr igual a value o que comienza con value-.
+[attr^=value]: Selecciona elementos con el atributo attr que comienza con value.
+[attr$=value]: Selecciona elementos con el atributo attr que termina con value.
+[attr*=value]: Selecciona elementos con el atributo attr que contiene value.
+

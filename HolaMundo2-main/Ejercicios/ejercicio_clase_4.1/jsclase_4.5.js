@@ -46,3 +46,5 @@ for (let i = 0; i < frase.length; i++) {
 }
 console.log("La letra " + letra + " aparece " + cuantas_veces + " Veces" )
 alert("La letra " + letra + " aparece " + cuantas_veces + " veces")
+
+//Ejercicio 3
