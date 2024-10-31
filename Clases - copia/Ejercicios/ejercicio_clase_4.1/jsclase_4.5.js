@@ -77,7 +77,7 @@ if (isNaN(nr3) && isNaN(nr4)) {
 }
 //Ejercicio 4: Almacena en dos variables datos de validación (usuario y contraseña) correctos y permite que el usuario valide (dispone de 3 intentos)
 // HAY QUE HACERLO CON DO WHILE!!!
-/* let usuario = "UsusarioCorrecto"
+let usuario = "UsusarioCorrecto"
 let contraseña = "ContraseñaCorrecta"
 
 let intentos = 3
@@ -92,30 +92,12 @@ for (let i = 0; i < intentos; i++) {
         alert("Usuario o contraseña incorrectas. Te quedan ${intentos-i-1} intentos.")
 
     }
-    if (i == intentos - 1) {
+    if(i== intentos-1){
         alert("Has agotado todos los intentos")
     }
 
-} */
+}
 /* 
 if (user != usuario || contraseña != password){
     alert("Ususario o contraseña incorrectas, vuelve a introducir el ususario y la contraseña")
 } */
-
-let usuario = "UsusarioCorrecto"
-let contraseña = "ContraseñaCorrecta"
-
-let intentos = 3
-
-do{
-    let user = prompt("Introduce el usuario")
-    let password = prompt("Introduce la contraseña")
-    if(user == usuario && contraseña == password){
-        alert("Esta bien")}
-        
-    else{
-        alert("Hazlo otra vez")
-    }
-
-}
-while((user != usuario || contraseña != password), intentos>3)
