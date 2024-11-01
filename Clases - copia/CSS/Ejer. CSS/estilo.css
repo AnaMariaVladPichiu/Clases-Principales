@@ -1,5 +1,0 @@
-p > span { color: blue; }
-<p><span>Texto1</span></p>
-<p><a href="#"><span>Texto2</span></a></p>
-p a { color: red; }
-p > a { color: blue; }
