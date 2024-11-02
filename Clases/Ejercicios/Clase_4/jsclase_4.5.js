@@ -190,8 +190,6 @@ function burbuja(lista) {
     return lista;
 }
 
-
-// Ejemplo de uso
 let palabras = ["banana", "ana", "despues", "come", "feliz", "es"];
 let palabrasOrdenadas = burbuja(palabras);
 alert(palabrasOrdenadas);
