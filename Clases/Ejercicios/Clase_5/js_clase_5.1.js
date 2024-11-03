@@ -29,10 +29,21 @@ const secuence = (a) => {           //Función flecha, anonima
 
     let serie = "";
     for (let i = 0; i < a; i++) {
-        serie += "*+_";
-        console.log(serie);
-    }
+        switch (i % 3) {
+            case 0:
+                serie += '*';
+                break;
+            case 1:
+                serie += '+';
+                break;
+            case 2:
+                serie += '_';
+                break;
 
+        }
+    }
+    alert(serie);
+    console.log(serie);
 }
 secuence(4);
 
@@ -58,18 +69,18 @@ triangulo(5);
 
 //Una función que devuelva la diferencia en días entre dos fechas del mismo año (sólo tenemos en cuenta dia y mes)
 
-const diferenciDias = ( function (fecha1, fecha2) {                         //Se emplea IIFE, función flecha y función expresión...
+const diferenciDias = (function (fecha1, fecha2) {                         //Se emplea IIFE, función flecha y función expresión...
     const diasPorMes = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];  //este array contiene el nr de dias de cada mes
-        const diasDesdeElInicioDelAno = (dia, mes) => {
-            let totalDias = dia;            //inicialización, empieza con el dia del mes actual(dia)
-            for (let i = 0; i < mes; i++)  //Recorre los meses anteriores al mes actual (mes - 1), sumando los días de esos meses a totalDias.
-                totalDias+= diasPorMes [i];
-            return totalDias;              //  La función devuelve el número total de días desde el inicio del año hasta la fecha dada.
-           };
-             const diasFecha1 = diasDesdeElInicioDelAno(fecha1.dia, fecha1.mes);
-             const diasFecha2 = diasDesdeElInicioDelAno(fecha2.dia, fecha2.mes);
-             return Math.abs(diasFecha2 - diasFecha1);   //Math.abs calcula el valor absoluto de la resta.
-    
+    const diasDesdeElInicioDelAno = (dia, mes) => {
+        let totalDias = dia;            //inicialización, empieza con el dia del mes actual(dia)
+        for (let i = 0; i < mes; i++)  //Recorre los meses anteriores al mes actual (mes - 1), sumando los días de esos meses a totalDias.
+            totalDias += diasPorMes[i];
+        return totalDias;              //  La función devuelve el número total de días desde el inicio del año hasta la fecha dada.
+    };
+    const diasFecha1 = diasDesdeElInicioDelAno(fecha1.dia, fecha1.mes);
+    const diasFecha2 = diasDesdeElInicioDelAno(fecha2.dia, fecha2.mes);
+    return Math.abs(diasFecha2 - diasFecha1);   //Math.abs calcula el valor absoluto de la resta.
 
-})({dia: 15, mes: 5}, {dia: 25, mes: 5});  //la función se llama imediatamente con los objetos{dia:15....}{dia;25....}
+
+})({ dia: 15, mes: 5 }, { dia: 25, mes: 5 });  //la función se llama imediatamente con los objetos{dia:15....}{dia;25....}
 alert(diferenciDias)
