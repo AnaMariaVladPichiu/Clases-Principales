@@ -1,5 +1,5 @@
 //El parámetro indica la cantidad de caracteres de la secuencia
-function ejercicio_2_3(tamSecuencia){ 
+/* function ejercicio_2_3(tamSecuencia){ 
     var mostrar = "";
     for (let i = 0; i < tamSecuencia; i++) {
         switch(i%3){
@@ -15,4 +15,22 @@ function ejercicio_2_3(tamSecuencia){
         }
     }
     alert(mostrar);
-}
+} */
+
+    
+    var promise = new Promise(function(resolve) {
+    
+        function sayHello() {
+            resolve('Hello World!');
+        }
+    
+        setTimeout(sayHello, 10000);
+    
+    })
+
+    console.log(promise);
+    
+    promise.then(function(message) {
+        console.log(message) 
+    })
+
