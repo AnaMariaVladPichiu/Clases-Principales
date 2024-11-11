@@ -1,0 +1,83 @@
+<!-- 
+<!DOCTYPE html> 
+<html lang="es"> 
+    <head> 
+        <meta charset="UTF-8" /> 
+        <title>Ejercicio DOML</title>
+        <style type="text/css">
+            .oculto { display: none; }
+            .visible { display: inline; }
+        </style>
+        <script type="text/javascript">
+            function muestra() { 
+                
+            }
+        </script>
+    </head>
+    <body>
+        <p id="texto">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed mattis enim vitae
+        orci. Phasellus libero. Maecenas nisl arcu, consequat congue, commodo nec, commodo ultricies,
+        turpis. Quisque sapien nunc, posuere vitae, rutrum et, luctus at, pede. Pellentesque massa
+        ante, ornare id, aliquam vitae, ultrices porttitor, pede. <span id="adicional"
+        class="oculto">Nullam sit amet nisl elementum elit convallis malesuada. Phasellus magna sem,
+        semper quis, faucibus ut, rhoncus non, mi. Duis pellentesque, felis eu adipiscing ullamcorper,
+        odio urna consequat arcu, at posuere ante quam non dolor. Lorem ipsum dolor sit amet,
+        consectetuer adipiscing elit. Duis scelerisque. Donec lacus neque, vehicula in, eleifend
+        vitae, venenatis ac, felis. Donec arcu. Nam sed tortor nec ipsum aliquam ullamcorper. Duis
+        accumsan metus eu urna. Aenean vitae enim. Integer lacus. Vestibulum venenatis erat eu odio.
+        Praesent id metus.</span>
+        </p>
+        <a id="enlace1" href="#" onclick="muestra();">Seguir leyendo</a> <br /> 
+        <a id="enlace2" href="#" class="oculto">Atrás</a> <br />
+    </body>
+</html>
+
+//Crear un nuevo evento en el enlace2 que llamará a la función oculta(). Dicha función ocultará el enlace2, el texto el span y volverá a mostrar el enlace Seguir leyendo.
+
+
+ -->
+
+
+
+ <!DOCTYPE html> 
+<html lang="es"> 
+<head> 
+    <meta charset="UTF-8" /> 
+    <title>Ejercicio DOML</title>
+    <style type="text/css">
+        .oculto { display: none; }
+        .visible { display: inline; }
+    </style>
+    <script type="text/javascript">
+        function muestra() {
+            // Ocultar el enlace "Seguir leyendo"
+            document.getElementById("enlace1").classList.add("oculto");
+            // Mostrar el texto adicional
+            document.getElementById("adicional").classList.remove("oculto");
+            document.getElementById("enlace2").classList.remove("oculto");
+        }
+
+        function oculta(){
+           document.getElementById("enlace2").classList.add("oculto");
+           document.getElementById("adicional").classList.add("oculto");
+           document.getElementById("enlace1").classList.remove("oculto");
+        }
+    </script>
+</head>
+<body>
+    <p id="texto">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed mattis enim vitae
+    orci. Phasellus libero. Maecenas nisl arcu, consequat congue, commodo nec, commodo ultricies,
+    turpis. Quisque sapien nunc, posuere vitae, rutrum et, luctus at, pede. Pellentesque massa
+    ante, ornare id, aliquam vitae, ultrices porttitor, pede. <span id="adicional"
+    class="oculto">Nullam sit amet nisl elementum elit convallis malesuada. Phasellus magna sem,
+    semper quis, faucibus ut, rhoncus non, mi. Duis pellentesque, felis eu adipiscing ullamcorper,
+    odio urna consequat arcu, at posuere ante quam non dolor. Lorem ipsum dolor sit amet,
+    consectetuer adipiscing elit. Duis scelerisque. Donec lacus neque, vehicula in, eleifend
+    vitae, venenatis ac, felis. Donec arcu. Nam sed tortor nec ipsum aliquam ullamcorper. Duis
+    accumsan metus eu urna. Aenean vitae enim. Integer lacus. Vestibulum venenatis erat eu odio.
+    Praesent id metus.</span>
+    </p>
+    <a id="enlace1" href="#" onclick="muestra();">Seguir leyendo</a> <br /> 
+    <a id="enlace2" href="#" class="oculto" onclick="oculta()">Atrás</a> <br />
+</body>
+</html>

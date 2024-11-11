@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario de Preguntas</title>
+    <style>
+        .oculta {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <form id="formulario">
+        <h2>¿Cuál es la capital de Francia?</h2>
+        <label>
+            <input type="radio" name="respuesta" value="Madrid"> Madrid
+        </label><br>
+        <label>
+            <input type="radio" name="respuesta" value="París"> París
+        </label><br>
+        <label>
+            <input type="radio" name="respuesta" value="Roma"> Roma
+        </label><br>
+        <label>
+            <input type="radio" name="respuesta" value="Berlín"> Berlín
+        </label><br>
+        <button type="submit">Enviar</button>
+    </form>
+    <p id="resultado" class="oculta"></p>
+
+    <script>
+        document.getElementById("formulario").addEventListener("submit", function(event) {
+            event.preventDefault(); // Evita el envío del formulario
+            var respuestaSeleccionada = document.querySelector('input[name="respuesta"]:checked');
+            var resultado = document.getElementById("resultado");
+
+            if (respuestaSeleccionada) {
+                if (respuestaSeleccionada.value === "París") {
+                    resultado.textContent = "¡Correcto! La capital de Francia es París.";
+                } else {
+                    resultado.textContent = "Incorrecto. La capital de Francia es París.";
+                }
+                resultado.classList.remove("oculta");
+            } else {
+                alert("Por favor, selecciona una respuesta.");
+            }
+        });
+    </script>
+</body>
+</html>

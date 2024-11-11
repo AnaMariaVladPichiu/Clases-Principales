@@ -1,0 +1,13 @@
+Ejercicios que hay que hacer sí o sí y entender: 
+
+4_5
+5_1
+10_3
+12_2
+12_4
+12_5
+12_6
+
+
+Recursividad
+QuerySelector
