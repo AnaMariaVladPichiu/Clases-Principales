@@ -8,6 +8,11 @@ Ejercicios que hay que hacer sí o sí y entender:
 12_5
 12_6
 
+ Todo lo que no es false es true. False= 0; null; undefined; false; NaN; "" cadena vacia.
 
-Recursividad
-QuerySelector
+ En JSON si una clave no existe se crea, si existe se sobreescribe.
+ La clave es la manera en la que se accede al valor. Parralelismo con los ARRAYs: en los arrays se accede al valor a traves de "i", digamos que la clave es la posicion"i". 
+
+
+Recursividad?
+QuerySelector?
