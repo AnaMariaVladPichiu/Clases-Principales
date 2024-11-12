@@ -25,7 +25,7 @@ function perro() {
 
 perro();
  */
-
+//
 (function () {
     localStorage.clear();
 })();
@@ -33,7 +33,7 @@ perro();
 const crearImg = (perro) =>{
     let img = document.querySelector("#principal");
     if(img){
-        pasarARegilla({message: img.src});
+        pasarARegilla( img.src);
         img.src = perro.message;    
     }else{
         img = document.createElement("img");
@@ -45,7 +45,13 @@ const crearImg = (perro) =>{
         div.appendChild(img);
         document.body.appendChild(div);
     }
-    localStorage.nImagenes ? localStorage.nImagenes=parseInt(localStorage.nImagenes)+1: localStorage.nImagenes = 0;
+
+    if(localStorage.nImagenes){
+        localStorage.nImagenes=parseInt(localStorage.nImagenes)+1;
+    }else{
+        localStorage.nImagenes = 0;
+    }
+    //localStorage.nImagenes ? localStorage.nImagenes=parseInt(localStorage.nImagenes)+1: localStorage.nImagenes = 0;
 }
 const random = function (){
     fetch("https://dog.ceo/api/breeds/image/random")
@@ -54,16 +60,16 @@ const random = function (){
 }
 //<div class="casilla" id="raza"><img src="imagen1.jpg" 
 //alt="Imagen 1"></div>
-function pasarARegilla(perro){
+function pasarARegilla(url){
     if(localStorage.nImagenes && localStorage.nImagenes=="20"){
         alert("Has terminado. Mira tu gráfica de razas");
         crearGrafica();
     }else{
         let divImg = document.createElement("div");
-        divImg.id = obtenerRaza(perro.message);
+        divImg.id = obtenerRaza(url);
         divImg.setAttribute("class", "casilla");
         let img = document.createElement("img");
-        img.src = perro.message;
+        img.src = url;
         img.height = 150;
         img.width = 150;
         divImg.appendChild(img);
@@ -78,7 +84,7 @@ function obtenerRaza(url){
 
 function crearGrafica() {
     // Contar las razas
-    let razas = {};
+    let razas = {};  //contador, cuantos perros de cada raza hay en la rejilla
     document.querySelectorAll('#rejilla .casilla').forEach(casilla => {
         let raza = casilla.id;
         razas[raza] = (razas[raza] || 0) + 1;
@@ -87,7 +93,8 @@ function crearGrafica() {
     // Preparar datos para la gráfica
     let labels = Object.keys(razas);
     let data = Object.values(razas);
-
+alert(labels) //muestra las razas
+alert(data)  //muestra el nr de veces que aparece cada raza
     // Obtener el contenedor de la gráfica
     let contenedorGrafica = document.getElementById('contenedor-grafica');
 
