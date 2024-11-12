@@ -47,7 +47,7 @@ const crearImg = (perro) =>{
     }
 
     if(localStorage.nImagenes){
-        localStorage.nImagenes=parseInt(localStorage.nImagenes)+1;
+        localStorage.nImagenes=parseInt(localStorage.nImagenes)+1; //parseInt: Convertir una cadena JSON a un objeto JavaScript
     }else{
         localStorage.nImagenes = 0;
     }

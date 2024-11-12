@@ -22,5 +22,7 @@ Todo lo que no es false es true. False= 0; null; undefined; false; NaN; "" caden
 Ejercicio Quiz, utilizar: el DOM, el addEventListener, event.preventDefault,
 encapsulamiento para que el usuarion no vea cierta información
 
-Recursividad
-QuerySelector
+Recursividad?
+QuerySelector?
+JSON.parse('[1, 2, 3, 4, ]'); //SyntaxError?
+JSON.parse('{"foo" : 1, }');  //SyntaxError?
