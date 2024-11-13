@@ -7,6 +7,7 @@ Ejercicios que hay que hacer sí o sí y entender:
 12_4
 12_5
 12_6
+prueba
 
  Todo lo que no es false es true. False= 0; null; undefined; false; NaN; "" cadena vacia.
 
