@@ -27,3 +27,4 @@ Recursividad?
 QuerySelector?
 JSON.parse('[1, 2, 3, 4, ]'); //SyntaxError?
 JSON.parse('{"foo" : 1, }');  //SyntaxError?
+clase boolean?
